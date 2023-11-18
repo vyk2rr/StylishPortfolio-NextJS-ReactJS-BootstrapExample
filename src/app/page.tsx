@@ -2,113 +2,135 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>This is only a test, Hello World!</h1>
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <a className="menu-toggle rounded" href="#"><i className="fa fa-bars"></i></a>
+      <nav className="navbar navbar-expand navbar-light" id="sidebar-wrapper">
+          <div className="container"><button data-bs-toggle="collapse" className="navbar-toggler d-none" data-bs-target="#"></button>
+              <div className="collapse navbar-collapse">
+                  <ul className="navbar-nav sidebar-nav" id="sidebar-nav">
+                      <li className="nav-item sidebar-brand"><a className="nav-link active js-scroll-trigger" href="#page-top">Brand</a></li>
+                      <li className="nav-item sidebar-nav-item"><a className="nav-link js-scroll-trigger" href="#page-top">Home</a></li>
+                      <li className="nav-item sidebar-nav-item"><a className="nav-link js-scroll-trigger" href="#about">About</a></li>
+                      <li className="nav-item sidebar-nav-item"><a className="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                      <li className="nav-item sidebar-nav-item"><a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                      <li className="nav-item sidebar-nav-item"><a className="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      <header className="d-flex masthead" style={{ backgroundImage: `url('assets/img/bg-masthead.jpg')` }}>
+          <div className="container my-auto text-center">
+              <h1 className="mb-1">Stylish Portfoliо</h1>
+              <h3 className="mb-5"><em>A Free Bootstrap Theme</em></h3><a className="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#about">Find Out More</a>
+              <div className="overlay"></div>
+          </div>
+      </header>
+      <section id="about" className="content-section bg-light">
+          <div className="container text-center">
+              <div className="row">
+                  <div className="col-lg-10 mx-auto">
+                      <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
+                      <p className="lead mb-5"><span>This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at&nbsp;</span><a href="https://unsplash.com/">Unsplash</a><span>!</span></p><a className="btn btn-dark btn-xl js-scroll-trigger" role="button" href="#services">What We Offer</a>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section id="services" className="content-section bg-primary text-white text-center">
+        <div className="container">
+            <div className="content-section-heading">
+                <h3 className="text-secondary mb-0">Services</h3>
+                <h2 className="mb-5">What We Offer</h2>
+            </div>
+            <div className="row">
+                <div className="col-md-6 col-lg-3 mb-5 mb-lg-0"><span className="mx-auto service-icon rounded-circle mb-3"><i className="icon-screen-smartphone"></i></span>
+                    <h4><strong>Responsive</strong></h4>
+                    <p className="mb-0 text-faded">Looks great on any screen size!</p>
+                </div>
+                <div className="col-md-6 col-lg-3 mb-5 mb-lg-0"><span className="mx-auto service-icon rounded-circle mb-3"><i className="icon-pencil"></i></span>
+                    <h4><strong>Redesigned</strong></h4>
+                    <p className="mb-0 text-faded">Freshly redesigned for Bootstrap 5.</p>
+                </div>
+                <div className="col-md-6 col-lg-3 mb-5 mb-lg-0"><span className="mx-auto service-icon rounded-circle mb-3"><i className="icon-like"></i></span>
+                    <h4><strong>Favorited</strong></h4>
+                    <p className="mb-0 text-faded"><span>Milions of users&nbsp;</span><i className="fa fa-heart"></i><span>&nbsp;us!</span></p>
+                </div>
+                <div className="col-md-6 col-lg-3 mb-5 mb-lg-0"><span className="mx-auto service-icon rounded-circle mb-3"><i className="icon-mustache"></i></span>
+                    <h4><strong>Question</strong></h4>
+                    <p className="mb-0 text-faded">I mustache you a question...</p>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </section>
+      <section className="callout" style={{
+        background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("assets/img/bg-callout.jpg")',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+      }}>
+          <div className="container text-center">
+              <h2 className="mx-auto mb-5"><span>Welcome to&nbsp;</span><em>your</em><span><br />next website!<br /></span></h2><a className="btn btn-primary btn-xl" role="button" href="#">Download Now!</a>
+          </div>
+      </section>
+      <section id="portfolio" className="content-section">
+          <div className="container">
+              <div className="content-section-heading text-center">
+                  <h3 className="text-secondary mb-0">Portfolio</h3>
+                  <h2 className="mb-5">Recent Projects</h2>
+              </div>
+              <div className="row g-0">
+                  <div className="col-lg-6"><a className="portfolio-item" href="#">
+                          <div className="caption">
+                              <div className="caption-content">
+                                  <h2>Stationary</h2>
+                                  <p className="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                              </div>
+                          </div><img className="img-fluid" src="assets/img/portfolio-1.jpg" />
+                      </a></div>
+                  <div className="col-lg-6"><a className="portfolio-item" href="#">
+                          <div className="caption">
+                              <div className="caption-content">
+                                  <h2>Ice Cream</h2>
+                                  <p className="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                              </div>
+                          </div><img className="img-fluid" src="assets/img/portfolio-2.jpg" />
+                      </a></div>
+                  <div className="col-lg-6"><a className="portfolio-item" href="#">
+                          <div className="caption">
+                              <div className="caption-content">
+                                  <h2>Strawberries</h2>
+                                  <p className="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                              </div>
+                          </div><img className="img-fluid" src="assets/img/portfolio-3.jpg" />
+                      </a></div>
+                  <div className="col-lg-6"><a className="portfolio-item" href="#">
+                          <div className="caption">
+                              <div className="caption-content">
+                                  <h2>Workspace</h2>
+                                  <p className="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                              </div>
+                          </div><img className="img-fluid" src="assets/img/portfolio-4.jpg" />
+                      </a></div>
+              </div>
+          </div>
+      </section>
+      <section className="content-section bg-primary text-white">
+          <div className="container text-center">
+              <h2 className="mb-4">The buttons below are impossible to resist..</h2><a className="btn btn-light btn-xl me-4" role="button" href="#">Click Me!</a><a className="btn btn-dark btn-xl me-4" role="button" href="#">Look at Me</a>
+          </div>
+      </section>
+      <section id="contact" className="map"><iframe allowfullscreen="" frameborder="0" src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="400"></iframe></section>
+      <footer className="footer text-center">
+          <div className="container">
+              <ul className="list-inline mb-5">
+                  <li className="list-inline-item">&nbsp;<a className="link-light social-link rounded-circle" href="#"><i className="icon-social-facebook"></i></a></li>
+                  <li className="list-inline-item">&nbsp;<a className="link-light social-link rounded-circle" href="#"><i className="icon-social-twitter"></i></a></li>
+                  <li className="list-inline-item">&nbsp;<a className="link-light social-link rounded-circle" href="#"><i className="icon-social-github"></i></a></li>
+              </ul>
+              <p className="text-muted mb-0 small">Copyright &nbsp;© Brand 2023</p>
+          </div><a className="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i className="fa fa-angle-up"></i></a>
+      </footer>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/js/stylish-portfolio.js"></script>
+    </>
   )
 }
