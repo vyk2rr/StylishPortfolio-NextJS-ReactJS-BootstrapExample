@@ -118,7 +118,7 @@ export default function Home() {
               <h2 className="mb-4">The buttons below are impossible to resist..</h2><a className="btn btn-light btn-xl me-4" role="button" href="#">Click Me!</a><a className="btn btn-dark btn-xl me-4" role="button" href="#">Look at Me</a>
           </div>
       </section>
-      <section id="contact" className="map"><iframe allowfullscreen="" frameborder="0" src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="400"></iframe></section>
+      <section id="contact" className="map"><iframe allowFullScreen src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="400"></iframe></section>
       <footer className="footer text-center">
           <div className="container">
               <ul className="list-inline mb-5">
