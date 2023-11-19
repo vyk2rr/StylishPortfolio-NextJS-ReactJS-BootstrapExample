@@ -1,4 +1,3 @@
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -129,8 +128,6 @@ export default function Home() {
               <p className="text-muted mb-0 small">Copyright &nbsp;© Brand 2023</p>
           </div><a className="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i className="fa fa-angle-up"></i></a>
       </footer>
-      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-      <script src="assets/js/stylish-portfolio.js"></script>
     </>
   )
 }
